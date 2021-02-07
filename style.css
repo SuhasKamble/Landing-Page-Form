@@ -17,6 +17,7 @@
     grid-gap: 1rem;
     padding: 1rem;
     line-height: 1.7;
+    overflow-x: hidden;
 
 }
 
@@ -28,6 +29,17 @@
     flex-direction: column;
     color: #fff;
     max-width: 90%;
+ 
+    animation: contentAnime 1s ease;
+}
+
+@keyframes contentAnime{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
 }
 .content h1{
     font-size: 3rem;
@@ -48,6 +60,20 @@
     border-radius: 10px;
     min-height:70% ;
     background: white;
+    animation: formAnime 1s ease;
+    
+}
+
+
+@keyframes formAnime{
+    0%{
+        transform: translateX(150%);
+
+    }
+    100%{
+        transform: translateX(0%);
+
+    }
 
 }
 
@@ -86,6 +112,8 @@
     .hero{
         grid-template-columns: 1fr;
     }
+
+
 
     .content{
         text-align: center;
